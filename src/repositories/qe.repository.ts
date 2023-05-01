@@ -11,6 +11,7 @@ export class QeRepository extends Repository {
     let data;
     try {
       const uid = this.client.state.cookieUserId;
+      if(!uid) throw new Error("uid is undefined")
       data = {
         _csrftoken: this.client.state.cookieCsrfToken,
         id: uid,
