@@ -64,7 +64,7 @@ export class State {
   language: string = 'en_US';
   timezoneOffset: string = String(new Date().getTimezoneOffset() * -60);
   radioType = 'wifi-none';
-  capabilitiesHeader = '3brTvwE=';
+  capabilitiesHeader = '3brTv10=';
   connectionTypeHeader = 'WIFI';
   isLayoutRTL: boolean = false;
   euDCEnabled?: boolean = undefined;
@@ -166,7 +166,7 @@ export class State {
   }
 
   public get cookieUserId() {
-    return this.extractCookieValue('ds_user_id');
+    return this.dsUserId
   }
 
   public get cookieUsername() {
