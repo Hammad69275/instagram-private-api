@@ -78,6 +78,7 @@ export class State {
   build: string;
   uuid: string;
   phoneId: string;
+  dsUserId: string;
   /**
    * Google Play Advertising ID.
    *
