@@ -91,6 +91,7 @@ export class Request {
       'ig-set-authorization': auth,
       'ig-set-password-encryption-key-id': pwKeyId,
       'ig-set-password-encryption-pub-key': pwPubKey,
+      "ig-set-ig-u-ds-user-id":dsUserId
     } = response.headers;
     if (typeof wwwClaim === 'string') {
       this.client.state.igWWWClaim = wwwClaim;
@@ -103,6 +104,9 @@ export class Request {
     }
     if (typeof pwPubKey === 'string') {
       this.client.state.passwordEncryptionPubKey = pwPubKey;
+    }
+    if (typeof dsUserId === 'string') {
+      this.client.state.dsUserId = pwPubKey;
     }
   }
 
