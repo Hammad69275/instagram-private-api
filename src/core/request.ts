@@ -106,7 +106,7 @@ export class Request {
       this.client.state.passwordEncryptionPubKey = pwPubKey;
     }
     if (typeof dsUserId === 'string') {
-      this.client.state.dsUserId = pwPubKey;
+      this.client.state.dsUserId = dsUserId;
     }
   }
 
